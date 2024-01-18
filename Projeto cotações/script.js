@@ -32,13 +32,13 @@ function converterMoeda() {
 			if (isNaN(valor)) {
 				console.error("Valor inválido. Insira um número.");
 				document.getElementById("resultadoConversao").innerText =
-					"Valor inválido";
+					"Campo de valor vazio";
 				return;
 			}
 
 			var resultadoConversao = valor / taxaDeCambio; 
 
-			document.getElementById("resultadoConversao").innerText = resultadoConversao.toFixed(2) + " " + moedaSelecionada;
+			document.getElementById("resultadoConversao").innerText = "R$" + valor.toFixed(2) + " para " + moedaSelecionada + ": $" + resultadoConversao.toFixed(2);
 		})
 		.catch((error) => {
 			console.error("Erro ao obter taxas de câmbio:", error);
@@ -61,13 +61,13 @@ function converterMoeda2() {
             if (isNaN(valor)) {
                 console.error("Valor inválido. Insira um número.");
                 document.getElementById("resultadoConversao2").innerText =
-                    "Valor inválido";
+                    "Campo de valor vazio";
                 return;
             }
 
             var resultadoConversao = valor / taxaDeCambio;
 
-            document.getElementById("resultadoConversao2").innerText = resultadoConversao.toFixed(2);
+            document.getElementById("resultadoConversao2").innerText = valor.toFixed(2) + " " + moedaSelecionada + " para BRL: R$ " + resultadoConversao.toFixed(2);
         })
         .catch((error) => {
             console.error("Erro ao obter taxas de câmbio:", error);
@@ -75,3 +75,15 @@ function converterMoeda2() {
                 "Erro ao converter";
         });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+	});
+});
