@@ -4,26 +4,91 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cotação de hoje</title>
-        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<nav id="navbar">
+			<ul>
+				<li><a href="#section1">Cotação de hoje</a></li>
+				<li><a href="#section2">Conversão BRL x Moeda</a></li>
+				<li><a href="#section3">Conversão Moeda x BRL</a></li>
+			</ul>
+		</nav>
 		<main>
-            <section id="section1">
-                <h2>Qual a moeda que você gostaria de acompanhar?</h2>
-                <h4>Atualizações a cada 30 segundos</h4>
-                <h5>Basta clicar na moeda e a cotação aparecerá logo abaixo</h5>
-                <button onclick="consultarCotacao('USD')">Dólar Americano</button>
-                <button onclick="consultarCotacao('EUR')">Euro</button>
-                <button onclick="consultarCotacao('GBP')">Libra Esterlina</button>
-                <button onclick="consultarCotacao('JPY')">Iene</button>
-                <button onclick="consultarCotacao('AUD')">Dólar Australiano</button>
-                <button onclick="consultarCotacao('CHF')">Franco Suíço</button>
-                <button onclick="consultarCotacao('CAD')">Dólar Canadense</button>
+			<section id="section1">
+				<h2>Qual a moeda que você gostaria de acompanhar em tempo real?</h2>
+				<h4>Atualizações a cada 30 segundos</h4>
+				<h5>Basta clicar na moeda e a cotação aparecerá logo abaixo</h5>
+				<button onclick="consultarCotacao('USD')">Dólar Americano</button>
+				<button onclick="consultarCotacao('EUR')">Euro</button>
+				<button onclick="consultarCotacao('GBP')">Libra Esterlina</button>
+				<button onclick="consultarCotacao('JPY')">Iene</button>
+				<button onclick="consultarCotacao('AUD')">Dólar Australiano</button>
+				<button onclick="consultarCotacao('CHF')">Franco Suíço</button>
+				<button onclick="consultarCotacao('CAD')">Dólar Canadense</button>
 
-                <div id="resultado"></div>
-            </section>
+				<div id="resultadoCotacao"></div>
+			</section>
+
+			<section id="section2">
+				<h2>Conversão</h2>
+				<h4>Real X A moeda que você quiser</h4>
+				<label for="valor1">Valor em Reais:</label>
+				<input
+					type="number"
+					id="valor1"
+					placeholder="Digite o valor"
+					step="any"
+				/>
+
+				<label for="moeda1">Moeda:</label>
+				<select id="moeda1">
+					<option value="USD">Dólar Americano (USD)</option>
+					<option value="EUR">Euro (EUR)</option>
+					<option value="GBP">Libra Esterlina (GBP)</option>
+					<option value="JPY">Iene (JPY)</option>
+					<option value="AUD">Dólar Australiano (AUD)</option>
+					<option value="CHF">Franco Suíço (CHF)</option>
+					<option value="CAD">Dólar Canadense (CAD)</option>
+				</select>
+
+				<button id="converter" onclick="converterMoeda()">Converter para Moeda</button>
+
+				<h3>Resultado: <span id="resultadoConversao"></span></h3>
+			</section>
+
+			<section id="section3">
+				<h2>Conversão</h2>
+				<h4>A moeda que você quiser X Real</h4>
+				<label for="moeda2">Moeda:</label>
+				<select id="moeda2">
+					<option value="USD">Dólar Americano (USD)</option>
+					<option value="EUR">Euro (EUR)</option>
+					<option value="GBP">Libra Esterlina (GBP)</option>
+					<option value="JPY">Iene (JPY)</option>
+					<option value="AUD">Dólar Australiano (AUD)</option>
+					<option value="CHF">Franco Suíço (CHF)</option>
+					<option value="CAD">Dólar Canadense (CAD)</option>
+				</select>
+
+				<label for="valor2">Valor da moeda:</label>
+				<input
+					type="number"
+					id="valor2"
+					placeholder="Digite o valor"
+					step="any"
+				/>
+				<button id="converter" onclick="converterMoeda2()">Converter para Real</button>
+
+				<h3>Resultado: R$<span id="resultadoConversao2"></span></h3>
+			</section>
 		</main>
+		
+		<footer id="footer">
+			<p>Thaelen de Morais Lima</p>
+			<p>Todos os direitos reservados.</p>
+		</footer>
 
-        <script src="script.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>

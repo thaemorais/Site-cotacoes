@@ -1,10 +1,7 @@
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+	padding: 0;
 	background-color: #f4f4f4;
     text-align: center;
 }
@@ -20,8 +17,57 @@ button {
 	cursor: pointer;
 }
 
-#resultado {
+#resultadoConversao, #resultadoCotacao {
 	margin-top: 20px;
 	font-size: 18px;
 	font-weight: bold;
+}
+
+#section2, #section1, #section3 {
+	padding-top: 100px;
+}
+
+#section3{
+	padding-bottom: 100px;
+}
+
+#footer{
+	height: 80px;
+	background-color: #98fb98;
+	padding: 10px 0px 10px;
+}
+
+#navbar, ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+#navbar{
+	background-color: darkolivegreen;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 1000;
+}
+
+li {
+	margin-right: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+button:hover,
+button:active {
+  background-color: #98fb98; 
 }
