@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cotação de hoje</title>
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<main>
+            <section id="section1">
+                <h2>Qual a moeda que você gostaria de acompanhar?</h2>
+                <h4>Atualizações a cada 30 segundos</h4>
+                <h5>Basta clicar na moeda e a cotação aparecerá logo abaixo</h5>
+                <button onclick="consultarCotacao('USD')">Dólar Americano</button>
+                <button onclick="consultarCotacao('EUR')">Euro</button>
+                <button onclick="consultarCotacao('GBP')">Libra Esterlina</button>
+                <button onclick="consultarCotacao('JPY')">Iene</button>
+                <button onclick="consultarCotacao('AUD')">Dólar Australiano</button>
+                <button onclick="consultarCotacao('CHF')">Franco Suíço</button>
+                <button onclick="consultarCotacao('CAD')">Dólar Canadense</button>
+
+                <div id="resultado"></div>
+            </section>
+		</main>
+
+        <script src="script.js"></script>
+	</body>
+</html>
