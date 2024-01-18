@@ -58,7 +58,8 @@ select {
 
 #footer {
 	height: 80px;
-	background-color: #98fb98;
+	background-color: darkolivegreen;
+	color: #f4f4f4;
 	padding: 10px 0px 10px;
 }
 
